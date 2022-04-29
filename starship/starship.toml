@@ -1,0 +1,22 @@
+command_timeout = 1000
+
+[hg_branch]
+symbol = " "
+
+[python]
+symbol = " "
+python_binary = "python3"
+
+[docker_context]
+symbol = " "
+
+[golang]
+symbol = "ﳑ "
+
+[kubernetes]
+disabled = false
+symbol = "ﴱ "
+
+# [aws]
+# disabled = true
+
