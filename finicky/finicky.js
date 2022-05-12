@@ -1,5 +1,5 @@
 module.exports = {
-  defaultBrowser: "Firefox Nightly",
+  defaultBrowser: "Brave Browser Dev",
   /*
   options: {
     logRequests: true,
@@ -8,11 +8,11 @@ module.exports = {
     {
       match: ({ opener }) =>
         ["com.tinyspeck.slackmacgap", "com.amazonaws.acvc.osx", "us.zoom.xos"].includes(opener.bundleId),
-      browser: "Firefox"
+      browser: "Brave Browser"
     },
     {
       match: [/github.com\/redpanda-data.*$/, "device.sso.*.amazonaws.com/*", "portal.sso.*.amazonaws.com/saml/assertion/*"],
-      browser: "Firefox"
+      browser: "Brave Browser"
     },
   ]
 }
