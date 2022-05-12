@@ -23,20 +23,22 @@ alias nerdctl="lima nerdctl"
 # alias grep="grep --color=auto"
 
 export BAT_THEME="Dracula"
+export EDITOR="nvim"
 
 # Path
 export GOPATH="$HOME/go"
 export PATH="/opt/homebrew/bin:$GOPATH/bin:$PATH:$HOME/.local/bin:$HOME/bin:${HOME}/.krew/bin"
 source $HOME/.cargo/env
 
+#/opt/homebrew/bin/gsed
 # Replace Mac/BSD utils with GNU utils 
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/gawk/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/gawk/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
 
 export GROFF_NO_SGR=yes
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6272a4"
@@ -68,8 +70,8 @@ bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
 
 # Kubernetes
-source <(kubectl completion zsh)
-source <(eksctl completion zsh)
+# source <(kubectl completion zsh)
+# source <(eksctl completion zsh)
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
