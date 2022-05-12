@@ -39,6 +39,7 @@ lspconfig.gopls.setup {
   cmd = {"gopls", "serve"},
   settings = {
     gopls = {
+      gofumpt = true,
       analyses = {
         unusedparams = true,
       },
@@ -66,4 +67,4 @@ autoformat "*.json"
 
 -- Docker
 lspconfig.dockerls.setup{ capabilities = capabilities }
-autoformat "Dockerfile"
+-- autoformat "Dockerfile"
