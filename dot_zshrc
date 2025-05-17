@@ -1,0 +1,97 @@
+#!/bin/env zsh
+
+# if [ "$TMUX" = "" ]; then export TERM="xterm-256color"; fi
+
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit -i
+done
+compinit -C -i
+
+export XDG_CONFIG_HOME="$HOME/.config"
+unset SSH_ASKPASS
+
+# Aliases 
+alias k="kubectl"
+alias vi="nvim"
+alias vim="nvim"
+alias c="pbcopy"
+alias v="pbpaste"
+alias ls="lsd"
+alias l="lsd"
+alias python="python3"
+alias tns="tmux new -s "
+alias nerdctl="lima nerdctl"
+alias grep="grep --color=auto"
+alias f="fg $1"
+alias ob="orb bash -c"
+
+export EDITOR="/opt/homebrew/bin/hx"
+export BAT_THEME="Dracula"
+
+# Path
+export GOPATH="$HOME/go"
+export PATH="/opt/homebrew/bin:$GOPATH/bin:$PATH:$HOME/.local/bin:$HOME/bin:${HOME}/.krew/bin"
+source $HOME/.cargo/env
+
+#/opt/homebrew/bin/gsed
+# Replace Mac/BSD utils with GNU utils 
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/gawk/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
+
+export GROFF_NO_SGR=yes
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6272a4"
+
+# Starship
+eval "$(starship init zsh)"
+
+# Sheldon
+# eval "$(sheldon source)"
+
+bindkey -e
+
+
+# Vim Mode
+# bindkey -v
+# export KEYTIMEOUT=1
+
+# bindkey '^P' history-substring-search-up
+# bindkey '^N' history-substring-search-down
+
+# # Backspace and ^h working even after
+# # returning from command mode
+# bindkey '^?' backward-delete-char
+# bindkey '^h' backward-delete-char
+
+# # ctrl-w removed word backwards
+# bindkey '^w' backward-kill-word
+
+# Kubernetes
+# source <(kubectl completion zsh)
+# source <(eksctl completion zsh)
+
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# ZSH history
+HISTSIZE=5000000
+SAVEHIST=1000000
+HISTFILE=$HOME/.zsh_history
+setopt inc_append_history
+setopt hist_ignore_dups
+setopt share_history
+
+# Colors in completion
+eval $(gdircolors)
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+# Case insensitive completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+# GPG
+export GPG_TTY=(tty)

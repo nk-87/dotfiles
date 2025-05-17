@@ -1,0 +1,33 @@
+#!/bin/bash
+
+brew bundle --file=/dev/stdin <<EOF
+{{ range .homebrew.taps -}}
+tap {{ . | quote }}
+{{ end -}}
+{{ if eq .type "work" -}}
+{{ range .homebrew.taps_work -}}
+tap {{ . | quote }}
+{{ end -}}
+{{ end -}}
+{{ range .homebrew.brews -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ if eq .type "work" -}}
+{{ range .homebrew.brews_work -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ end -}}
+{{ range .homebrew.casks -}}
+cask {{ . | quote }}
+{{ end -}}
+{{ if eq .type "personal" -}}
+{{ range .homebrew.casks_personal -}}
+cask {{ . | quote }}
+{{ end -}}
+{{ end -}}
+{{ if eq .type "work" -}}
+{{ range .homebrew.casks_work -}}
+cask {{ . | quote }}
+{{ end -}}
+{{ end -}}
+EOF

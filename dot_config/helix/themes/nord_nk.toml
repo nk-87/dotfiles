@@ -1,0 +1,5 @@
+inherits = "nord"
+
+# Match builtins with main
+"function.builtin" = "nord8"
+"type" = "nord7"

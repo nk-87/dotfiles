@@ -1,0 +1,36 @@
+command_timeout = 10000
+
+[golang]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[c]
+symbol = " "
+
+[java]
+symbol = " "
+
+[python]
+symbol = " "
+python_binary = "python3"
+
+[git_branch]
+symbol = " "
+
+[docker_context]
+symbol = " "
+
+[kubernetes]
+disabled = false
+symbol = "󱃾 "
+
+[terraform]
+symbol = "󱁢 "
+
+[aws]
+symbol = " "
+
+[gcloud]
+symbol = "󱇶 "

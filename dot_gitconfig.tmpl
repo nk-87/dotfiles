@@ -1,0 +1,19 @@
+[user]
+	name = Namho Kim
+	email = {{ .git_email }}
+	{{ if .git_sign }}
+	signingkey = {{ .git_signing_key }}
+	{{ end }}
+{{ if .git_ssh_sign }}
+[gpg]
+	format = ssh
+{{end}}
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = {{ .git_sign }}
