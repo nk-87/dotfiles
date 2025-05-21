@@ -39,3 +39,7 @@ if status is-interactive
 
     starship init fish | source
 end
+
+{{ if .orbstack -}}
+source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+{{ end -}}
