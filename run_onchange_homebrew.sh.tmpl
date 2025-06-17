@@ -1,14 +1,6 @@
 #!/bin/bash
 
 brew bundle --file=/dev/stdin <<EOF
-{{ range .homebrew.taps -}}
-tap {{ . | quote }}
-{{ end -}}
-{{ if eq .type "work" -}}
-{{ range .homebrew.taps_work -}}
-tap {{ . | quote }}
-{{ end -}}
-{{ end -}}
 {{ range .homebrew.brews -}}
 brew {{ . | quote }}
 {{ end -}}

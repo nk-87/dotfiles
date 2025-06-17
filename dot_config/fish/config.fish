@@ -1,5 +1,8 @@
 if status is-interactive
-    fish_config theme choose dracula
+    fish_config theme choose catppuccin-macchiato
+
+    fish_default_key_bindings -M insert
+    fish_vi_key_bindings --no-erase insert
 
     # Aliases / Abbreviations
     abbr -a k kubectl
@@ -16,8 +19,7 @@ if status is-interactive
     alias python=python3
     alias grep="grep --color=auto"
 
-    set -x EDITOR /opt/homebrew/bin/hx
-    set -x BAT_THEME Dracula
+    set -x EDITOR /opt/homebrew/bin/nvim
     set -e SSH_ASKPASS
     set -gx GPG_TTY (tty)
 
@@ -25,9 +27,7 @@ if status is-interactive
     fish_add_path \
         "$HOME/.local/bin" \
         "$HOME/bin" \
-        "$HOME/krew/bin" \
         "$GOPATH/bin" \
-        "$HOME/.cargo/bin" \
         /opt/homebrew/bin \
         /opt/homebrew/opt/coreutils/libexec/gnubin \
         /opt/homebrew/opt/gnu-tar/libexec/gnubin \
@@ -39,7 +39,3 @@ if status is-interactive
 
     starship init fish | source
 end
-
-{{ if .orbstack -}}
-source ~/.orbstack/shell/init2.fish 2>/dev/null || :
-{{ end -}}

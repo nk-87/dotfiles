@@ -1,8 +1,8 @@
 font-family = "JetBrains Mono NL Medium"
 font-size = "20"
 
-theme = "dracula"
-background = "#282a36"
+theme = "catppuccin-macchiato"
+
 
 macos-titlebar-style = "tabs"
 macos-icon = "custom-style"
