@@ -4,11 +4,6 @@ brew bundle --file=/dev/stdin <<EOF
 {{ range .homebrew.brews -}}
 brew {{ . | quote }}
 {{ end -}}
-{{ if eq .type "work" -}}
-{{ range .homebrew.brews_work -}}
-brew {{ . | quote }}
-{{ end -}}
-{{ end -}}
 {{ range .homebrew.casks -}}
 cask {{ . | quote }}
 {{ end -}}
