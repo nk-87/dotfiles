@@ -82,6 +82,15 @@ config.keys = {
 			one_shot = false,
 		}),
 	},
+	{
+		key = "C",
+		mods = "LEADER",
+		action = act.SpawnCommandInNewTab({
+			domain = "CurrentPaneDomain",
+			cwd = wezterm.home_dir,
+		}),
+	},
+	{ key = "c", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
 
 	{ key = "[", mods = "LEADER", action = act.ActivateCopyMode },
 	{ key = "z", mods = "LEADER", action = act.TogglePaneZoomState },
