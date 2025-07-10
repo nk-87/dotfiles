@@ -69,6 +69,7 @@ homebrew:
     - "rectangle"
     - "shottr"
     - "utm"
+    - "wezterm"
 
   casks_personal:
     - "calibre"
