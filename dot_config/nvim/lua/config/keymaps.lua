@@ -6,11 +6,11 @@
 local map = vim.keymap.set
 
 map("n", "<leader>fo", function()
-  Snacks.terminal.toggle("fish", { interactive = true })
+	Snacks.terminal.toggle("fish", { interactive = true })
 end, { desc = "Floating Terminal (cwd)" })
 
 map("n", "<c-.>", function()
-  Snacks.terminal.toggle("fish", { interactive = true })
+	Snacks.terminal.toggle("fish", { interactive = true })
 end, { desc = "Floating Terminal (cwd)" })
 
-map("t", "<c-[><c-[>", "<c-\\><c-n>", { desc = "Exit terminal mode" })
+map("t", "<c-\\><c-\\>", "<c-\\><c-n>", { desc = "Exit terminal mode" })
