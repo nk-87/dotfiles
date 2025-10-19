@@ -16,7 +16,6 @@ if status is-interactive
     abbr -a nerdctl lima nerdctl
     abbr -a py python
 
-    alias python=python3
     alias grep="grep --color=auto"
 
     set -x EDITOR /opt/homebrew/bin/nvim
