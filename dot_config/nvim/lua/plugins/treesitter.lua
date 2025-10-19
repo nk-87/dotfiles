@@ -4,6 +4,8 @@ return {
   opts = {
     ensure_installed = {
       "bash",
+      "elm",
+      "gleam",
       "go",
       "hcl",
       "html",
@@ -15,7 +17,6 @@ return {
       "python",
       "query",
       "regex",
-      "swift",
       "terraform",
       "vim",
       "yaml",
