@@ -19,6 +19,7 @@ return {
           nav_j = { "<C-D-j>", term_nav("j"), desc = "Go to Lower Window", expr = true, mode = "t" },
           nav_k = { "<C-D-k>", term_nav("k"), desc = "Go to Upper Window", expr = true, mode = "t" },
           nav_l = { "<C-D-l>", term_nav("l"), desc = "Go to Right Window", expr = true, mode = "t" },
+          hide_slash = { "<C-/>", "hide", desc = "Hide Terminal", mode = { "t" } },
         },
       },
     },
