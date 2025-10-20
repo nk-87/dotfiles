@@ -1,9 +1,0 @@
-inherits = "dracula"
-
-"operator" = {fg = "pink"}
-"keyword.storage.type" = {fg = "pink"}
-"constant" = {fg = "foreground"}
-"variable.function" = {fg = "green"}
-"ui.menu" = {fg = "foreground", bg = "darker"}
-"ui.menu.selected" = {fg = "darker", bg = "pink"}
-"ui.popup" = {bg = "darker"}
